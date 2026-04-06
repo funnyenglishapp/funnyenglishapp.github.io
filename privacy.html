@@ -9,36 +9,37 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.8;
             color: #333;
-            max-width: 900px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 30px;
+            padding: 20px;
             background-color: #f4f7f9;
         }
         .container {
             background-color: #fff;
-            padding: 50px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
         h1 {
             color: #1a73e8;
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2.2em;
             border-bottom: 3px solid #1a73e8;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
         }
         h2 {
             color: #1a73e8;
-            margin-top: 35px;
-            font-size: 1.6em;
+            margin-top: 30px;
+            font-size: 1.5em;
             border-left: 6px solid #1a73e8;
-            padding-left: 15px;
+            padding-left: 12px;
         }
         p, li {
-            margin-bottom: 15px;
+            margin-bottom: 14px;
             text-align: justify;
             font-size: 1.05em;
+            word-break: break-word; /* 🔥 FIX for overflow */
         }
         ul {
             margin-bottom: 20px;
@@ -49,25 +50,44 @@
         }
         .contact-box {
             background-color: #f1f3f4;
-            padding: 25px;
+            padding: 20px;
             border-radius: 10px;
             margin-top: 40px;
             border: 1px solid #dadce0;
         }
+        .contact-box p {
+            word-break: break-all; /* 🔥 EMAIL NEVER OVERFLOW */
+        }
         .contact-title {
             color: #1a73e8;
-            font-size: 1.4em;
+            font-size: 1.3em;
             font-weight: bold;
             margin-bottom: 10px;
             display: block;
         }
         .footer {
-            margin-top: 50px;
+            margin-top: 40px;
             text-align: center;
-            font-size: 0.95em;
+            font-size: 0.9em;
             color: #5f6368;
             border-top: 1px solid #eee;
-            padding-top: 20px;
+            padding-top: 15px;
+        }
+
+        /* 🔥 MOBILE PERFECT OPTIMIZATION */
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.7em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
@@ -80,40 +100,24 @@
 
         <h2>1. Content Retrieval & Architecture</h2>
         <p>To ensure our users always have access to the most current and relevant educational content, our application utilizes advanced content retrieval systems. These systems periodically synchronize the internal vocabulary database with <strong>secure, industry-standard cloud endpoints</strong>.</p>
-        <ul>
-            <li><strong>Encrypted Synchronization:</strong> All content data is retrieved through modern encrypted protocols to maintain the absolute integrity and authenticity of the educational material.</li>
-            <li><strong>Total Anonymity:</strong> This retrieval process is strictly a one-way communication designed for content delivery. We do not transmit any unique device identifiers, hardware serials, or user-specific telemetry to our retrieval servers.</li>
-        </ul>
 
         <h2>2. Interactive Audio Analysis</h2>
-        <p>A core feature of our application is the 'Voice Game,' which provides real-time feedback on English pronunciation. This feature is built using <strong>advanced native system technologies</strong> to prioritize user privacy.</p>
-        <ul>
-            <li><strong>Volatile Memory Processing:</strong> Your voice interactions are processed instantly within the volatile memory (RAM) of your device. This process leverages the device's native operating system engine for immediate analysis.</li>
-            <li><strong>Non-Persistent Architecture:</strong> We have a strict policy against audio storage. We do not record, intercept, or upload your voice data to any external server. All analysis occurs within a <strong>secure, sandboxed environment</strong> and is discarded immediately after providing feedback.</li>
-        </ul>
+        <p>A core feature of our application is the 'Voice Game,' which provides real-time feedback on English pronunciation using privacy-first native technologies.</p>
 
         <h2>3. Data Collection & Privacy Principles</h2>
-        <p>We operate on a foundational principle of <strong>Zero-Data Collection</strong>. Our business model is based on education, not data harvesting.</p>
-        <ul>
-            <li><strong>No PII Acquisition:</strong> We do not collect, request, or store any Personally Identifiable Information (PII). This includes, but is not limited to, names, email addresses, phone numbers, or physical locations.</li>
-            <li><strong>No Behavioral Tracking:</strong> We do not deploy any third-party analytics or behavioral tracking scripts. Your learning habits, mistake patterns, and progress are entirely private and remain on your device.</li>
-        </ul>
+        <p>We operate on a foundational principle of <strong>Zero-Data Collection</strong>. We do not collect personal data or track user behavior.</p>
 
         <h2>4. Localized Information Management</h2>
-        <p>All application preferences, user settings, and learning progress are managed exclusively within the <strong>isolated local storage</strong> of your specific device.</p>
-        <ul>
-            <li><strong>Zero Centralization:</strong> Your data is never centralized. Consequently, it is technically impossible for us to share, sell, or distribute your information to third-party advertisers or data brokers.</li>
-            <li><strong>Absolute User Ownership:</strong> You retain complete control over your data. Clearing the application's cache or performing a standard uninstallation will permanently purge all localized information from your device.</li>
-        </ul>
+        <p>All preferences and progress are stored locally on your device only.</p>
 
         <h2>5. System Security & Integrity</h2>
-        <p>We employ commercially reasonable technical and organizational measures to safeguard the application's environment. The application operates within a <strong>secure system sandbox</strong>, preventing unauthorized access to other files or sensitive data on your device.</p>
+        <p>The application runs in a secure sandbox environment to protect your data.</p>
 
         <h2>6. Children’s Privacy Compliance</h2>
-        <p>Our application is designed for a general audience and ensures that no personal data is ever collected from children, aligning with global privacy principles.</p>
+        <p>No personal data is collected from children. The app is safe for all users.</p>
 
         <h2>7. Changes to This Policy</h2>
-        <p>We reserve the right to update this Privacy Policy as needed. Any changes will be reflected by updating the "Last updated" date above.</p>
+        <p>We may update this policy when needed. Changes will be reflected above.</p>
 
         <div class="contact-box">
             <span class="contact-title">Contact Us</span>
